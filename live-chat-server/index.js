@@ -7,7 +7,9 @@ const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 app.use(
   cors({
-    origin: "*",
+    origin: ["https://mern-project-final-frontend.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
   })
 );
 dotenv.config();
