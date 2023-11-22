@@ -27,7 +27,7 @@ function Welcome() {
         },
       };
       await axios.put(
-        `http://localhost:8080/user/update-username/${userData.data._id}`,
+        `https://mern-project-final-rho.vercel.app/user/update-username/${userData.data._id}`,
         { newUsername },
         config
       );
