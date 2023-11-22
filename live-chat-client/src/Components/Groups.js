@@ -41,7 +41,7 @@ function Groups() {
     };
 
     axios
-      .get("http://localhost:8080/chat/fetchGroups", config)
+      .get("https://mern-project-final-rho.vercel.app//chat/fetchGroups", config)
       .then((response) => {
         console.log("Group Data from API ", response.data);
         SetGroups(response.data);
@@ -57,7 +57,7 @@ function Groups() {
   
     try {
       await axios.put(
-        "http://localhost:8080/user/updateUsername",
+        "https://mern-project-final-rho.vercel.app//user/updateUsername",
         {
           userId: user._id,
           newUsername: newUsername,
@@ -144,7 +144,7 @@ function Groups() {
                      },
                    };
                    axios.post(
-                     "http://localhost:8080/chat/",
+                     "https://mern-project-final-rho.vercel.app//chat/",
                      {
                        userId: user._id,
                      },
