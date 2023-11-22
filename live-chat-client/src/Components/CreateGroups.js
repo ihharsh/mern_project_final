@@ -52,7 +52,7 @@ function CreateGroups() {
     };
 
     axios.post(
-      "http://localhost:8080/chat/createGroup",
+      "https://mern-project-final-rho.vercel.app//chat/createGroup",
       {
         name: groupName,
         users: '["647d94aea97e40a17278c7e5","647d999e4c3dd7ca9a2e6543"]',
