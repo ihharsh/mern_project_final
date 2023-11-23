@@ -32,7 +32,7 @@ function ChatArea() {
     };
     axios
       .post(
-        "https://mern-project-final-rho.vercel.app//message/",
+        "https://mern-project-final-rho.vercel.app/message/",
         {
           content: messageContent,
           chatId: chat_id,
@@ -55,7 +55,7 @@ function ChatArea() {
       },
     };
     axios
-      .get("https://mern-project-final-rho.vercel.app//message/" + chat_id, config)
+      .get("https://mern-project-final-rho.vercel.app/message/" + chat_id, config)
       .then(({ data }) => {
         setAllMessages(data);
         setloaded(true);
@@ -76,7 +76,7 @@ function ChatArea() {
       const userId = userData.data._id; // Replace with the actual variable holding user ID
   
       // Make a DELETE request to your backend endpoint
-      await axios.delete(`https://mern-project-final-rho.vercel.app//chat/deleteChats/${userId}`, config);
+      await axios.delete(`https://mern-project-final-rho.vercel.app/chat/deleteChats/${userId}`, config);
   
       // Optionally, you can update the state or perform any other actions after deletion
       // For example, redirect to a different page or refresh the chat list
