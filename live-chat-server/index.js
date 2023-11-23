@@ -22,7 +22,10 @@ const messageRoutes = require("./Routes/messageRoutes");
 
 const connectDb = async () => {
   try {
-    const connect = await mongoose.connect(process.env.MONGO_URI);
+    const connect = await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     console.log("Server is Connected to Database");
   } catch (err) {
     console.log("Server is NOT connected to Database", err.message);
